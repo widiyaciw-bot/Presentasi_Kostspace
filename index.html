@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentasi KostSpace - Widiya (25010036)</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Fredoka & Poppins untuk kesan feminin, keren, dan lucu -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- CONTAINER UTAMA PRESENTASI -->
+    <div class="presentation-container">
+        
+        <!-- HEADER / NAVBAR SLIDE -->
+        <header class="slide-header">
+            <div class="brand">✨ KostSpace Presentation</div>
+            <div class="slide-counter">Slide <span id="current-slide-num">1</span> dari <span id="total-slides">14</span></div>
+        </header>
+
+        <!-- SLIDES WRAPPER -->
+        <main class="slides-wrapper">
+
+            <!-- SLIDE 1: JUDUL / COVER -->
+            <section class="slide active" data-slide="1">
+                <div class="cover-content">
+                    <span class="badge-cute">🌸 Pemrograman Web</span>
+                    <h1>Sewa & Oper Kost Mahasiswa</h1>
+                    <h2>Platform Digital Solusi Hunian Mahasiswa</h2>
+                    <div class="author-card">
+                        <p><strong>Nama:</strong> Widiya</p>
+                        <p><strong>NPM:</strong> 25010036</p>
+                        <p><strong>Kampus:</strong> Universitas Dehasen Bengkulu</p>
+                    </div>
+                    <a href="https://infokost-drab.vercel.app" target="_blank" class="btn-live-demo">🚀 Kunjungi Website Live KostSpace</a>
+                </div>
+            </section>
+
+            <!-- SLIDE 2: ANALISIS MASALAH -->
+            <section class="slide" data-slide="2">
+                <h2>💡 Analisis Masalah</h2>
+                <p class="slide-subtitle">Mengapa platform KostSpace ini dibangun?</p>
+                <div class="grid-cards">
+                    <div class="card-item">
+                        <span class="emoji">🔍</span>
+                        <h3>Sulit Cari Anggaran</h3>
+                        <p>Mahasiswa kesulitan mencari kost yang sesuai dengan anggaran dan lokasi strategis dekat kampus.</p>
+                    </div>
+                    <div class="card-item">
+                        <span class="emoji">💸</span>
+                        <h3>Kerugian Oper Kost</h3>
+                        <p>Mahasiswa yang pindah sebelum masa sewa habis rugi karena uang muka hangus & susah mengalihkan sisa masa sewa.</p>
+                    </div>
+                    <div class="card-item">
+                        <span class="emoji">⏳</span>
+                        <h3>Sewa Jangka Pendek</h3>
+                        <p>Banyak mahasiswa membutuhkan hunian fleksibel untuk jangka waktu pendek (semesteran/bulanan).</p>
+                    </div>
+                    <div class="card-item">
+                        <span class="emoji">🔒</span>
+                        <h3>Keamanan Pemilik</h3>
+                        <p>Pemilik kost membutuhkan kepastian dan keamanan mengenai identitas penyewa baru secara transparan.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 3: ROLE AKSES & MATRIKS FITUR -->
+            <section class="slide" data-slide="3">
+                <h2>👩‍💻 Role Akses & Fitur Sistem</h2>
+                <div class="role-grid">
+                    <div class="role-box">
+                        <h3>1. Pengunjung</h3>
+                        <p>Belum login. Bisa melihat katalog & detail kost serta registrasi/login.</p>
+                    </div>
+                    <div class="role-box">
+                        <h3>2. Pengguna (Mahasiswa)</h3>
+                        <p>Mencari kost, mengajukan sewa, membuat serta mengelola iklan oper kost.</p>
+                    </div>
+                    <div class="role-box">
+                        <h3>3. Pemilik Kost</h3>
+                        <p>Mengelola data kost, memantau pengajuan sewa, dan verifikasi keputusan.</p>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="matrix-table">
+                        <tr>
+                            <th>Fitur / Modul</th>
+                            <th>Pengunjung</th>
+                            <th>Pengguna</th>
+                            <th>Pemilik</th>
+                        </tr>
+                        <tr><td>Lihat Katalog & Detail Kost</td><td>✔️</td><td>✔️</td><td>✔️</td></tr>
+                        <tr><td>Registrasi & Login</td><td>✔️</td><td>✔️</td><td>✔️</td></tr>
+                        <tr><td>Kelola Profil</td><td>❌</td><td>✔️</td><td>✔️</td></tr>
+                        <tr><td>Ajukan Sewa Kost</td><td>❌</td><td>✔️</td><td>❌</td></tr>
+                        <tr><td>Kelola Pengajuan Sewa</td><td>❌</td><td>❌</td><td>✔️</td></tr>
+                        <tr><td>Posting & Kelola Oper Kost</td><td>❌</td><td>✔️</td><td>❌</td></tr>
+                        <tr><td>Kelola Data Kost</td><td>❌</td><td>❌</td><td>✔️</td></tr>
+                    </table>
+                </div>
+            </section>
+
+            <!-- SLIDE 4: USE CASE DIAGRAM -->
+            <section class="slide" data-slide="4">
+                <h2>📊 UML: Use Case Diagram</h2>
+                <p class="slide-subtitle">Pemetaan interaksi aktor dengan sistem KostSpace</p>
+                <div class="showcase-container">
+                    <div class="screenshot-box">
+                        <img src="pemograman web-Use Case.drawio.png" alt="Use Case Diagram">
+                        <span class="caption">Use Case Diagram Sistem</span>
+                    </div>
+                    <div class="showcase-desc">
+                        <h3>Aktor & Fungsionalitas:</h3>
+                        <ul>
+                            <li><strong>Pengunjung:</strong> Melihat katalog & detail kost, registrasi, dan login.</li>
+                            <li><strong>Pengguna:</strong> Mengelola profil, mengajukan sewa, serta posting dan kelola oper kost.</li>
+                            <li><strong>Pemilik Kost:</strong> Mengelola data kost, pengajuan sewa, dan pengajuan oper kost.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 5: ACTIVITY DIAGRAM PENGGUNA -->
+            <section class="slide" data-slide="5">
+                <h2>📈 UML: Activity Diagram (Pengguna)</h2>
+                <p class="slide-subtitle">Alur aktivitas pengguna dari registrasi hingga pengajuan sewa/oper kost</p>
+                <div class="showcase-container">
+                    <div class="screenshot-box">
+                        <img src="Activity.drawio.png" alt="Activity Diagram Pengguna">
+                        <span class="caption">Activity Diagram - Pengguna & Pengunjung</span>
+                    </div>
+                    <div class="showcase-desc">
+                        <h3>Alur Proses Pengguna:</h3>
+                        <ul>
+                            <li>Mulai dari membuka website, melihat katalog, registrasi/login.</li>
+                            <li>Menjelajahi informasi kost dan memilih opsi sewa atau oper kost.</li>
+                            <li>Melakukan pengajuan dan memantau status konfirmasi dari pemilik.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 6: ACTIVITY DIAGRAM PEMILIK -->
+            <section class="slide" data-slide="6">
+                <h2>📈 UML: Activity Diagram (Pemilik Kost)</h2>
+                <p class="slide-subtitle">Alur aktivitas pengelolaan oleh pemilik kost</p>
+                <div class="showcase-container">
+                    <div class="screenshot-box">
+                        <img src="pemograman web-Activity pemilik kost.drawio.png" alt="Activity Diagram Pemilik Kost">
+                        <span class="caption">Activity Diagram - Pemilik Kost</span>
+                    </div>
+                    <div class="showcase-desc">
+                        <h3>Alur Proses Pemilik:</h3>
+                        <ul>
+                            <li>Login ke halaman pemilik dan mengelola profil.</li>
+                            <li>Mengelola data kost, pengajuan sewa, dan pengajuan oper kost.</li>
+                            <li>Memantau dan mengubah status persetujuan pengajuan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 7: SEQUENCE DIAGRAM SEWA -->
+            <section class="slide" data-slide="7">
+                <h2>🔄 UML: Sequence Diagram (Ajukan Sewa)</h2>
+                <p class="slide-subtitle">Interaksi sistem saat proses pengajuan sewa dan persetujuan</p>
+                <div class="showcase-container">
+                    <div class="screenshot-box">
+                        <img src="pemograman web-Sequence Diagram  - Ajukan sewa & Persetujuan.drawio.png" alt="Sequence Sewa">
+                        <span class="caption">Sequence Diagram - Pengajuan Sewa & Persetujuan</span>
+                    </div>
+                    <div class="showcase-desc">
+                        <h3>Alur Interaksi Sewa:</h3>
+                        <ul>
+                            <li>Pengguna klik ajukan sewa, sistem mengecek status autentikasi login.</li>
+                            <li>Data pengajuan disimpan ke database Supabase dengan status "Menunggu".</li>
+                            <li>Pemilik membuka kelola pengajuan dan melakukan konfirmasi (Terima/Tolak).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 8: SEQUENCE DIAGRAM OPER KOST -->
+            <section class="slide" data-slide="8">
+                <h2>🔄 UML: Sequence Diagram (Oper Kost)</h2>
+                <p class="slide-subtitle">Interaksi sistem saat pengguna memposting dan mengajukan oper kost</p>
+                <div class="showcase-container">
+                    <div class="screenshot-box">
+                        <img src="pemograman web-Sequence Diagram – Oper Kost.drawio.png" alt="Sequence Oper">
+                        <span class="caption">Sequence Diagram - Oper Kost & Sisa Sewa</span>
+                    </div>
+                    <div class="showcase-desc">
+                        <h3>Alur Interaksi Oper Kost:</h3>
+                        <ul>
+                            <li>Pengguna A memposting oper kost, data disimpan dan tampil di daftar publik.</li>
+                            <li>Pengguna B melihat detail dan mengirim pengajuan oper kost beserta identitas.</li>
+                            <li>Pemilik/Pengoper memproses keputusan, memperbarui status, dan menutup postingan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 9: CLASS DIAGRAM -->
+            <section class="slide" data-slide="9">
+                <h2>🗂️ UML: Class Diagram</h2>
+                <p class="slide-subtitle">Struktur entitas, atribut, dan relasi basis data</p>
+                <div class="showcase-container">
+                    <div class="screenshot-box">
+                        <img src="pemograman web-Class Diagram.drawio.png" alt="Class Diagram">
+                        <span class="caption">Class Diagram Sistem KostSpace</span>
+                    </div>
+                    <div class="showcase-desc">
+                        <h3>Entitas Utama:</h3>
+                        <ul>
+                            <li><strong>User:</strong> Menyimpan data akun, profil, dan role akses.</li>
+                            <li><strong>Kost & FotoKost:</strong> Mengelola informasi detail kamar dan galeri foto.</li>
+                            <li><strong>OperKost & Pengajuan Sewa:</strong> Mencatat transaksi dan status persetujuan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 10: PENJELASAN ALUR KERJA SISTEM -->
+            <section class="slide" data-slide="10">
+                <h2>⚙️ Penjelasan Alur Kerja Sistem (Workflow)</h2>
+                <p class="slide-subtitle">Bagaimana cara kerja aplikasi KostSpace secara keseluruhan</p>
+                <div class="grid-cards" style="grid-template-columns: repeat(3, 1fr); text-align: left;">
+                    <div class="card-item" style="padding: 15px;">
+                        <span class="emoji">1️⃣</span>
+                        <h3 style="font-size: 0.9rem; color:#d8435d;">Eksplorasi Katalog</h3>
+                        <p style="font-size: 0.75rem;">Pengunjung bebas melihat daftar kost, fasilitas, dan detail harga secara transparan tanpa harus login terlebih dahulu.</p>
+                    </div>
+                    <div class="card-item" style="padding: 15px;">
+                        <span class="emoji">2️⃣</span>
+                        <h3 style="font-size: 0.9rem; color:#d8435d;">Transaksi & Interaksi</h3>
+                        <p style="font-size: 0.75rem;">Setelah login, mahasiswa dapat mengajukan sewa kamar, menyimpan favorit, berdiskusi via fitur chat, atau memposting oper kost.</p>
+                    </div>
+                    <div class="card-item" style="padding: 15px;">
+                        <span class="emoji">3️⃣</span>
+                        <h3 style="font-size: 0.9rem; color:#d8435d;">Manajemen Pemilik</h3>
+                        <p style="font-size: 0.75rem;">Pemilik kost memantau daftar kamar, menerima atau menolak pengajuan masuk, serta memastikan keamanan identitas penyewa.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 11: SCREENSHOT HALAMAN MASUK / LOGIN -->
+            <section class="slide" data-slide="11">
+                <h2>🔐 Tampilan Web: Halaman Masuk (Login)</h2>
+                <p class="slide-subtitle">Gerbang autentikasi awal bagi pengguna dan pemilik kost</p>
+                <div class="showcase-container">
+                    <div class="screenshot-box">
+                        <img src="masuk.png" alt="Halaman Masuk">
+                        <span class="caption">Antarmuka Halaman Masuk / Login KostSpace</span>
+                    </div>
+                    <div class="showcase-desc">
+                        <h3>Alur & Fungsi Halaman Masuk:</h3>
+                        <ul>
+                            <li>Berfungsi sebagai pintu gerbang utama sistem untuk memverifikasi hak akses pengguna.</li>
+                            <li>Input email dan password terhubung langsung dengan tabel <code>users</code> di database Supabase.</li>
+                            <li>Mengarahkan pengguna secara otomatis ke halaman yang tepat (Dashboard Pengguna atau Portal Pemilik) berdasarkan role akun mereka.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 12: SCREENSHOT PORTAL PEMILIK KOST -->
+            <section class="slide" data-slide="12">
+                <h2>🔑 Tampilan Web: Portal Pemilik Kost</h2>
+                <p class="slide-subtitle">Dashboard manajemen khusus pemilik setelah berhasil masuk</p>
+                <div class="showcase-container">
+                    <div class="screenshot-box">
+                        <img src="pemilik.png" alt="Portal Pemilik">
+                        <span class="caption">Dashboard Pengelolaan Data Kost & Pengajuan</span>
+                    </div>
+                    <div class="showcase-desc">
+                        <h3>Alur & Fitur Portal Pemilik:</h3>
+                        <ul>
+                            <li>Menampilkan menu manajemen properti seperti Data Kost, Pengajuan Sewa, dan Pesan.</li>
+                            <li>Memungkinkan pemilik menambah kamar baru, memperbarui informasi harga, atau menghapus data kost.</li>
+                            <li>Memantau status ketersediaan kamar secara real-time untuk merespons calon penyewa.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 13: SCREENSHOT DASHBOARD PENGGUNA -->
+            <section class="slide" data-slide="13">
+                <h2>💻 Tampilan Web: Dashboard Pengguna</h2>
+                <p class="slide-subtitle">Antarmuka utama mahasiswa setelah berhasil masuk ke sistem</p>
+                <div class="showcase-container">
+                    <div class="screenshot-box">
+                        <img src="pengguna.png" alt="Dashboard Pengguna">
+                        <span class="caption">Halaman Utama / Katalog Kost Mahasiswa</span>
+                    </div>
+                    <div class="showcase-desc">
+                        <h3>Alur & Fitur Dashboard Pengguna:</h3>
+                        <ul>
+                            <li>Menyediakan sapaan personal bagi mahasiswa yang sedang aktif menjelajah web.</li>
+                            <li>Menu navigasi lengkap mencakup Beranda, Cari Kost, Oper Kost, Pesan, dan Profil.</li>
+                            <li>Memfasilitasi pencarian kost instan berdasarkan nama atau lokasi favorit.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 14: KESIMPULAN & LINK LIVE DEMO -->
+            <section class="slide" data-slide="14">
+                <div class="cover-content">
+                    <span class="badge-cute">🎉 Terima Kasih!</span>
+                    <h1>Kesimpulan & Demo Aplikasi</h1>
+                    <p style="margin: 15px 0; font-size: 0.95rem; color: #555; line-height: 1.5;">
+                        Aplikasi <strong>KostSpace</strong> dirancang secara komprehensif mulai dari pemodelan UML, penjelasan alur kerja sistem, hingga implementasi antarmuka web yang fungsional dan responsif.
+                    </p>
+                    <div style="margin-top: 20px;">
+                        <a href="https://infokost-drab.vercel.app" target="_blank" class="btn-live-demo pulse" style="font-size: 1.05rem; padding: 12px 25px;">
+                            🔗 Buka Web Live: infokost-drab.vercel.app
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER KONTROL NAVIGASI SLIDE -->
+        <footer class="slide-footer">
+            <button id="prev-btn" class="btn-control" onclick="changeSlide(-1)">⬅️ Sebelumnya</button>
+            <div class="slide-dots" id="slide-dots"></div>
+            <button id="next-btn" class="btn-control primary" onclick="changeSlide(1)">Selanjutnya ➡️</button>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

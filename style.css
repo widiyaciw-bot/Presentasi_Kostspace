@@ -21,17 +21,18 @@ body {
     background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
     background-color: var(--soft-bg);
     color: var(--text-main);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    padding: 10px;
 }
 
 .presentation-container {
-    width: 90vw;
+    width: 100%;
     max-width: 1050px;
-    height: 85vh;
+    height: 88vh;
+    max-height: 750px;
     background: var(--white);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
@@ -39,29 +40,31 @@ body {
     flex-direction: column;
     border: 3px solid #ffccd5;
     position: relative;
+    overflow: hidden;
 }
 
 /* Header Slide */
 .slide-header {
-    padding: 18px 30px;
+    padding: 15px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px dashed #ffe5ec;
+    flex-shrink: 0;
 }
 
 .brand {
     font-family: 'Fredoka', cursive;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: var(--primary-pink);
     font-weight: 600;
 }
 
 .slide-counter {
     background: #ffe5ec;
-    padding: 5px 14px;
+    padding: 4px 12px;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 600;
     color: #d8435d;
 }
@@ -70,8 +73,8 @@ body {
 .slides-wrapper {
     flex: 1;
     position: relative;
-    overflow: hidden;
-    padding: 25px 40px;
+    overflow-y: auto;
+    padding: 20px 30px;
     display: flex;
     align-items: center;
 }
@@ -89,6 +92,8 @@ body {
     flex-direction: column;
     justify-content: center;
     transform: translateY(15px);
+    overflow-y: auto;
+    padding: 10px;
 }
 
 .slide.active {
@@ -107,39 +112,39 @@ body {
 .badge-cute {
     background: #ffe5ec;
     color: #ff477e;
-    padding: 6px 15px;
+    padding: 5px 14px;
     border-radius: 30px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
     display: inline-block;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .cover-content h1 {
     font-family: 'Fredoka', cursive;
-    font-size: 2.3rem;
+    font-size: 2rem;
     color: #2b2b2b;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .cover-content h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--text-muted);
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .author-card {
     background: #fff0f3;
-    padding: 12px 20px;
+    padding: 10px 18px;
     border-radius: 12px;
     display: inline-block;
     border: 1px dashed var(--primary-pink);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .author-card p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #444;
 }
 
@@ -148,11 +153,11 @@ body {
     display: inline-block;
     background: linear-gradient(135deg, var(--primary-pink), var(--secondary-pink));
     color: white;
-    padding: 10px 22px;
+    padding: 10px 20px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     box-shadow: 0 5px 15px rgba(255, 117, 140, 0.4);
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -172,81 +177,76 @@ body {
     100% { transform: scale(1); }
 }
 
-/* Slide 2: Grid Analisis */
+/* Slide Judul & Subtitle */
 .slide h2 {
     font-family: 'Fredoka', cursive;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: #2b2b2b;
     margin-bottom: 4px;
 }
 
 .slide-subtitle {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--text-muted);
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
+/* Grid Analisis Masalah */
 .grid-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
+    gap: 10px;
 }
 
 .card-item {
     background: #fff9fb;
     border: 2px solid #ffe5ec;
-    padding: 15px;
-    border-radius: 14px;
+    padding: 12px;
+    border-radius: 12px;
     text-align: center;
-    transition: transform 0.3s;
-}
-
-.card-item:hover {
-    transform: translateY(-4px);
-    background: #fff0f3;
 }
 
 .card-item .emoji {
-    font-size: 1.8rem;
-    margin-bottom: 8px;
+    font-size: 1.5rem;
+    margin-bottom: 6px;
     display: block;
 }
 
 .card-item h3 {
-    font-size: 0.9rem;
-    margin-bottom: 6px;
+    font-size: 0.85rem;
+    margin-bottom: 4px;
     color: #d8435d;
 }
 
 .card-item p {
-    font-size: 0.73rem;
+    font-size: 0.7rem;
     color: var(--text-muted);
-    line-height: 1.35;
+    line-height: 1.3;
 }
 
-/* Slide 3: Role & Matrix */
+/* Role & Matrix */
 .role-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-bottom: 15px;
+    gap: 10px;
+    margin-bottom: 12px;
 }
 
 .role-box {
     background: #fff0f3;
-    padding: 12px 15px;
-    border-radius: 10px;
-    border-left: 4px solid var(--primary-pink);
+    padding: 10px 12px;
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-pink);
 }
 
 .role-box h3 {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #d8435d;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 }
 
 .role-box p {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     color: var(--text-muted);
 }
 
@@ -257,11 +257,11 @@ body {
 .matrix-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
 }
 
 .matrix-table th, .matrix-table td {
-    padding: 6px 10px;
+    padding: 5px 8px;
     text-align: center;
     border: 1px solid #ffe5ec;
 }
@@ -271,44 +271,44 @@ body {
     color: #d8435d;
 }
 
-/* Showcase Slides (Screenshot Web) */
+/* Showcase Slides (Screenshot Web & UML) */
 .showcase-container {
     display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 15px;
     align-items: center;
     width: 100%;
 }
 
 .screenshot-box {
     background: #f8f9fa;
-    border: 3px solid #ffe5ec;
-    border-radius: 10px;
+    border: 2px solid #ffe5ec;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     text-align: center;
 }
 
 .screenshot-box img {
     width: 100%;
-    max-height: 240px;
+    max-height: 220px;
     object-fit: contain;
     display: block;
+    margin: 0 auto;
 }
 
 .screenshot-box .caption {
     background: #ffe5ec;
     display: block;
-    padding: 5px;
-    font-size: 0.72rem;
+    padding: 4px;
+    font-size: 0.68rem;
     color: #d8435d;
     font-weight: 600;
 }
 
 .showcase-desc h3 {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     color: #d8435d;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .showcase-desc ul {
@@ -316,38 +316,39 @@ body {
 }
 
 .showcase-desc li {
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     color: var(--text-muted);
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     position: relative;
-    padding-left: 18px;
+    padding-left: 16px;
 }
 
 .showcase-desc li::before {
     content: "🌸";
     position: absolute;
     left: 0;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
 }
 
 /* Footer & Navigasi */
 .slide-footer {
-    padding: 18px 30px;
+    padding: 15px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top: 2px dashed #ffe5ec;
+    flex-shrink: 0;
 }
 
 .btn-control {
     background: #fff0f3;
     border: 1px solid #ffccd5;
     color: #d8435d;
-    padding: 7px 16px;
+    padding: 6px 14px;
     border-radius: 20px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     transition: 0.2s;
 }
 
@@ -361,18 +362,14 @@ body {
     border: none;
 }
 
-.btn-control.primary:hover {
-    background: #ff5c77;
-}
-
 .slide-dots {
     display: flex;
-    gap: 6px;
+    gap: 5px;
 }
 
 .dot {
-    width: 9px;
-    height: 9px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: #ffd1dc;
     cursor: pointer;
@@ -382,4 +379,58 @@ body {
 .dot.active {
     background: var(--primary-pink);
     transform: scale(1.2);
+}
+
+/* ================= MEDIA QUERIES (RESPONSIF UNTUK HP / MOBILE) ================= */
+@media (max-width: 768px) {
+    .presentation-container {
+        width: 98vw;
+        height: 95vh;
+        max-height: none;
+    }
+
+    .slides-wrapper {
+        padding: 15px;
+    }
+
+    .cover-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .cover-content h2 {
+        font-size: 0.9rem;
+    }
+
+    /* Ubah grid jadi 1 kolom di HP agar tidak mengecil/sesak */
+    .grid-cards, .role-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .showcase-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .screenshot-box img {
+        max-height: 160px;
+    }
+
+    .slide h2 {
+        font-size: 1.2rem;
+    }
+
+    .slide-subtitle {
+        font-size: 0.75rem;
+        margin-bottom: 10px;
+    }
+
+    .slide-header, .slide-footer {
+        padding: 10px 15px;
+    }
+
+    .btn-control {
+        padding: 5px 10px;
+        font-size: 0.7rem;
+    }
 }
